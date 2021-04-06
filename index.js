@@ -1,11 +1,11 @@
 const express = require('express'); // bilbioteca do express (framework para aplicações web para Node.js)
 const app = express();
-const bodyParser = require('body-parser'); //módulo capaz de converter o body da requisição para formato json
+const bodyParser = require('body-parser'); //biblioteca para converter o body da requisição para formato json
 const connection = require('./database/database');//importando conexão com o DB
 const Pergunta = require('./database/Pergunta');//importando modelo pergunta do DB
 const Resposta = require('./database/Resposta');//importando modelo resposta do RB
 
-//Executando a conexão com a database
+//Conexão com a database
 connection
     .authenticate()
     .then(() => {
@@ -16,7 +16,7 @@ connection
     })
 
 app.set('view engine','ejs'); //Iniciando a biblioteca 'EJS' na aplicação express (motor de renderização HTML)
-app.use(express.static('public')); // Iniciante biblioteca para trabalhar com arquivos estaticos (multimida, imagem, javafront e etc)
+app.use(express.static('public')); // Biblioteca para trabalhar com arquivos estaticos (multimida, imagem, javafront e etc)
 
 //Body Parser - biblioteca que permite importar formlários de HTML para JS
 app.use(bodyParser.urlencoded({extended: false}));
