@@ -1,6 +1,6 @@
 const express = require('express'); // bilbioteca do express (framework para aplicações web para Node.js)
 const app = express();
-const bodyParser = require('body-parser'); //biblioteca para converter o body da requisição para formato json
+const bodyParser = require('body-parser'); //biblioteca para converter o body da requisição para json
 const connection = require('./database/database');//importando conexão com o DB
 const Pergunta = require('./database/Pergunta');//importando modelo pergunta do DB
 const Resposta = require('./database/Resposta');//importando modelo resposta do RB
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 //Rotas
-app.get('/',(req,res) =>{ //rota principal
+app.get('/',(req,res) =>{ //rota principal que exibe as perguntas na página inicial
   Pergunta.findAll({ raw: true, order:[
       ['id','DESC']//ordenar as perguntas da maneira decrescente
   ]}).then(pergunta =>{ // = SELECT ALL from perguntas
