@@ -11,7 +11,7 @@ A Plataforma de Perguntas e Respostas, possibilita que um usuário realize uma p
 ### Autor:
 Luiz Garcia
 
-### Projeto liscenciado por:
+### Projeto licenciado por:
 Guia do Programador @ todos os direitos reservados
 Endereço: https://guiadoprogramador.eadplataforma.com/
 
