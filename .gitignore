@@ -105,3 +105,8 @@ dist
 
 # TernJS port file
 .tern-port
+articles/Article.js
+articles/ArticlesController.js
+categories/CategoriesController.js
+categories/Category.js
+middlewares/adminAuth.js
